@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: sans-serif;
+  --ff-secondary: ;
+
+  --fw-thin: 100;
+  --fw-bold: 600;
+
+  --clr-box: #ccccff;
+  --clr-font-main: #000000;
+
+  --width-box: 19%;
+  --height-box: var(--width-box);
+
+  --fs-h1: 3rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.5rem;
+  --fs-default: 1rem;
+  --fs-small: 0.75rem;
+  --fs-xsmall: 0.5em;
+}
+@media (min-width: 640px) {
+}
+@media (min-width: 767px) {
+}
+@media (min-width: 1023px) {
+}
+@media (min-width: 1280px) {
+}
+@media (min-width: 1365px) {
+}
+body {
+  width: 95%;
+  margin: 0 auto;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-default);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+a {
+  text-decoration: none;
+  color: var(--clr-font-main);
+}
+
+/*HEADER*/
+header {
+  order: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: solid;
+  border-width: 1px;
+  padding: 25px;
+}
+.logo {
+  background: url(../images/logos/main-logo.svg) no-repeat center center;
+}
+.primary-logo {
+  /*default size*/
+  width: 75px;
+  height: 75px;
+}
+.work .primary-logo {
+  /*only index size*/
+  width: 150px;
+  height: 150px;
+}
+.primary-title {
+  text-align: center;
+  margin: 25px;
+  font-size: var(--fs-h3);
+}
+.navigation {
+}
+.navigation li {
+  display: inline-block;
+  margin: 0 25px 0 25px;
+}
+.work .navigation > :nth-child(1) {
+  font-weight: bold;
+}
+.work-expand .navigation > :nth-child(1) {
+  font-weight: bold;
+}
+.about .navigation > :nth-child(2) {
+  font-weight: bold;
+}
+
+/*MAIN content page, all goes here*/
+div.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin: 25px 0 25px 0;
+}
+
+/*WORK SHOWCASE BOX*/
+.showcase-wrapper {
+  overflow: hidden;
+  width: 48%;
+  padding-top: calc(1 / 3 * 100% - 2%) /*2:3 Ratio*/;
+  position: relative;
+  background-color: var(--clr-box);
+  border: solid 0.5px grey;
+  margin: 12.5px 0 12.5px 0;
+}
+.showcase-image {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img.toggle-size {
+  width: 100%;
+}
+.showcase-explanation {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+  font-size: 3vw; /*change later*/
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  opacity: 0%;
+}
+
+/*QUOTE for about*/
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2#myquotehello {
+  margin: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+h3#myquotetext {
+  text-align: center;
+}
+span#resume {
+  display: inline-block;
+  margin-top: 25px;
+  font-weight: bold;
+}
+.box-button h3 {
+  text-align: center;
+  margin: 25px;
+  display: inline-block;
+  border: solid;
+  padding: 10px 50px;
+}
+
+/*WORK SHOWCASE EXPAND PAGE*/
+.showcase-expand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.showcase-expand > * {
+  margin: 25px;
+  width: 80%;
+  text-align: center;
+}
+.showcase-expand-title {
+  text-align: center;
+}
+.showcase-expand-explanation {
+  font-size: var(--fs-default);
+  text-align: center;
+}
+.showcase-expand-img {
+  border: solid 0.5px grey;
+  background-color: var(--clr-box);
+  height: fit-content;
+}
+.showcase-expand-img img {
+  width: 100%;
+}
+div#neboke-video {
+  position: relative;
+  padding-bottom: calc(0.4375 * 100%); /* 16:9 */
+  height: 0;
+}
+.showcase-expand-img video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border-top: solid;
+  border-width: 1px;
+  padding: 25px 0 12.5px 0;
+}
+p#copyright {
+  font-size: var(--fs-small);
+  text-align: center;
+  margin-top: 25px;
+}
+
+a.link {
+  color: royalblue;
+}
+@media (max-width: 1023px) {
+}
