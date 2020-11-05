@@ -17,23 +17,32 @@
   --width-box: 19%;
   --height-box: var(--width-box);
 
-  --fs-h1: 3rem;
-  --fs-h2: 2rem;
-  --fs-h3: 1.5rem;
-  --fs-default: 1rem;
-  --fs-small: 0.75rem;
-  --fs-xsmall: 0.5em;
+  --fs-h1: "max(5vw, 50px)";
+  --fs-h2: "max(4vw, 20px)";
+  --fs-h3: "max(3vw, 30px)";
+  --fs-default: 2vw;
+  --fs-small: 1.5vw;
+  --fs-xsmall: 1vw;
 }
 @media (min-width: 640px) {
 }
-@media (min-width: 767px) {
-}
-@media (min-width: 1023px) {
-}
-@media (min-width: 1280px) {
+@media (max-width: 767px) {
+  body.work div.main .showcase-wrapper {
+    width: 100%;
+    padding-top: calc(2 / 3 * 100% - 2%) /*2:3 Ratio*/;
+  }
+  :root {
+    --fs-h1: 6vw;
+    --fs-h2: 5vw;
+    --fs-h3: 4vw;
+    --fs-default: 3vw;
+    --fs-small: 2vw;
+    --fs-xsmall: 1.5vw;
+  }
 }
 @media (min-width: 1365px) {
 }
+
 body {
   width: 95%;
   margin: 0 auto;
@@ -41,8 +50,10 @@ body {
   font-size: var(--fs-default);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
 }
-
 h1 {
   font-size: var(--fs-h1);
 }
@@ -66,6 +77,7 @@ header {
   border-bottom: solid;
   border-width: 1px;
   padding: 25px;
+  width: 100%;
 }
 .logo {
   background: url(../images/logos/main-logo.svg) no-repeat center center;
@@ -107,6 +119,7 @@ div.main {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  max-width: 1280px;
   height: 100%;
   margin: 25px 0 25px 0;
 }
@@ -146,7 +159,7 @@ img.toggle-size {
   align-items: center;
   text-align: center;
   padding: 5%;
-  font-size: 3vw; /*change later*/
+  font-size: var(--fs-h3); /*change later*/
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   display: flex;
@@ -154,27 +167,18 @@ img.toggle-size {
 }
 
 /*QUOTE for about*/
-.quote {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-h2#myquotehello {
-  margin: 25px;
-  text-align: center;
+#myquotehello {
+  font-size: var(--fs-h3);
   font-weight: bold;
 }
-h3#myquotetext {
-  text-align: center;
+#myquotetext {
+  font-size: var(--fs-small);
 }
 span#resume {
-  display: inline-block;
-  margin-top: 25px;
   font-weight: bold;
 }
 .box-button h3 {
   text-align: center;
-  margin: 25px;
   display: inline-block;
   border: solid;
   padding: 10px 50px;
@@ -230,6 +234,7 @@ footer {
   border-top: solid;
   border-width: 1px;
   padding: 25px 0 12.5px 0;
+  width: 100%;
 }
 p#copyright {
   font-size: var(--fs-small);
