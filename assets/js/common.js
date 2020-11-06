@@ -2,7 +2,7 @@ $(function () {
     $(".showcase-wrapper").on("mouseover", ShowcaseAnimationStart);
     $(".showcase-wrapper").on("mouseout", ShowcaseAnimationEnd);
     $("li.genre-button").on("click", ShowGenre);
-    $("button.reset-genre, div.main").on("click", RestoreGenre);
+    $(".reset-genre, div.main").on("click", RestoreGenre);
     AddImagesinExplanationPage();
     AddImagesinWorkShowcase();
 });
@@ -65,6 +65,8 @@ function DecreaseSize(i) {
         );
 }
 function ShowGenre(){
+    $(".genre-button").css({"font-weight": "normal"});
+    $(this).css({"font-weight": "bold"});
     let source = $(this).attr("data-genre");
     let target = $(".showcase-wrapper");
     for (let i = 0; i < $(".showcase-wrapper").length; i++){
@@ -90,6 +92,7 @@ function ShowGenre(){
             console.log("Added showcase for " + target.eq(i).attr("id"));
         }
     }
+    $(".reset-genre").html("Reset");
 }
 function RestoreGenre(){
     $(".showcase-wrapper").stop(true)
@@ -100,4 +103,5 @@ function RestoreGenre(){
         {"opacity" : "100"}, 400
     )
     ;
+    $(".reset-genre").html("Sort");
 }
