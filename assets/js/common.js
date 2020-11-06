@@ -1,11 +1,13 @@
 $(function () {
     $(".showcase-wrapper").on("mouseover", ShowcaseAnimationStart);
     $(".showcase-wrapper").on("mouseout", ShowcaseAnimationEnd);
+    $("li.genre-button").on("click", ShowGenre);
+    $("button.reset-genre, div.main").on("click", RestoreGenre);
     AddImagesinExplanationPage();
     AddImagesinWorkShowcase();
 });
 function ShowcaseAnimationStart() {
-    let target = $(this)
+    let target = $(this);
     Show(target);
     IncreaseSize(target);
 }
@@ -61,4 +63,41 @@ function DecreaseSize(i) {
         .transition(
             { scale: 1 }
         );
+}
+function ShowGenre(){
+    let source = $(this).attr("data-genre");
+    let target = $(".showcase-wrapper");
+    for (let i = 0; i < $(".showcase-wrapper").length; i++){
+        if (!target.eq(i).attr("data-genre").includes(source)){
+            target.eq(i).stop(true)
+            .transition(
+                {"opacity" : "0"}, 400
+            )
+            .transition(
+                {"display":"none"}
+            )
+            ;
+            console.log("Removed showcase for " + target.eq(i).attr("id"));
+        }else if(target.eq(i).attr("data-genre").includes(source)){
+            target.eq(i).stop(true)
+            .transition(
+                {"display":"flex"}
+            )
+            .transition(
+                {"opacity" : "100"}, 400
+            )
+            ;
+            console.log("Added showcase for " + target.eq(i).attr("id"));
+        }
+    }
+}
+function RestoreGenre(){
+    $(".showcase-wrapper").stop(true)
+    .transition(
+        {"display":"flex"}
+    )
+    .transition(
+        {"opacity" : "100"}, 400
+    )
+    ;
 }

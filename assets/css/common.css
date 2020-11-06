@@ -17,9 +17,9 @@
   --width-box: 19%;
   --height-box: var(--width-box);
 
-  --fs-h1: "max(5vw, 50px)";
-  --fs-h2: "max(4vw, 20px)";
-  --fs-h3: "max(3vw, 30px)";
+  --fs-h1: max(5vw, 50px);
+  --fs-h2: max(4vw, 20px);
+  --fs-h3: max(3vw, 30px);
   --fs-default: 2vw;
   --fs-small: 1.5vw;
   --fs-xsmall: 1vw;
@@ -97,8 +97,6 @@ header {
   margin: 25px;
   font-size: var(--fs-h3);
 }
-.navigation {
-}
 .navigation li {
   display: inline-block;
   margin: 0 25px 0 25px;
@@ -113,11 +111,34 @@ header {
   font-weight: bold;
 }
 
+/*GENRE SORTER*/
+div.genre {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.genre h3 {
+  width: fit-content;
+}
+.genre ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+li.genre-button {
+  margin: 0 25px 0 25px;
+  text-align: center;
+}
+
 /*MAIN content page, all goes here*/
 div.main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   max-width: 1280px;
   height: 100%;
@@ -133,6 +154,7 @@ div.main {
   background-color: var(--clr-box);
   border: solid 0.5px grey;
   margin: 12.5px 0 12.5px 0;
+  display: flex;
 }
 .showcase-image {
   z-index: 0;
