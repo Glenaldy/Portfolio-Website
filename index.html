@@ -3,7 +3,7 @@
 
 <head>
   <title>Glenaldy Sebastian</title>
-  <link rel="icon" href="assets/images/logos/main-logo.svg">
+  <link rel="icon" href="assets/images/logos/main-favicon.svg">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
@@ -23,14 +23,17 @@
       <li><a href="about.html">About</a></li>
     </ul>
   </header>
-  <div class="genre clickable">
-    <h3 class="reset-genre">Sort</h3>
-    <ul>
-      <li class="genre-button" data-genre="illustrator">Illustrator</li>
-      <li class="genre-button" data-genre="three">3D work</li>
-      <li class="genre-button" data-genre="website">Website</li>
-      <li class="genre-button" data-genre="video">Video</li>
-      <li class="genre-button" data-genre="product">Product Design</li>
+  <div class="genre">
+    <div class="expander reset-genre clickable">
+      <h3 id="sort">Sort</h3>
+      <div class="arrow clickable mobile-only">⌵</div>
+    </div>
+    <ul class="expand-target">
+      <li class="genre-button clickable" data-genre="illustrator">Illustrator</li>
+      <li class="genre-button clickable" data-genre="three">3D work</li>
+      <li class="genre-button clickable" data-genre="website">Website</li>
+      <li class="genre-button clickable" data-genre="video">Video</li>
+      <li class="genre-button clickable" data-genre="product">Product Design</li>
     </ul>
   </div>
   <div class="main">

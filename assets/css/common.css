@@ -26,20 +26,7 @@
 }
 @media (min-width: 640px) {
 }
-@media (max-width: 767px) {
-  body.work div.main .showcase-wrapper {
-    width: 100%;
-    padding-top: calc(2 / 3 * 100% - 2%) /*2:3 Ratio*/;
-  }
-  :root {
-    --fs-h1: 6vw;
-    --fs-h2: 5vw;
-    --fs-h3: 4vw;
-    --fs-default: 3vw;
-    --fs-small: 2vw;
-    --fs-xsmall: 1.5vw;
-  }
-}
+
 @media (min-width: 1365px) {
 }
 
@@ -66,7 +53,7 @@ a {
   text-decoration: none;
   color: var(--clr-font-main);
 }
-.clickable{
+.clickable {
   cursor: pointer;
 }
 
@@ -118,12 +105,16 @@ div.genre {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 1000px;
   justify-content: space-between;
   margin-top: 25px;
 }
+.genre .expander {
+  padding-left: 25px;
+  margin-bottom: 25px;
+}
 .genre h3 {
   width: fit-content;
-  margin: 0 0 25px 25px;
   font-weight: bold;
 }
 .genre ul {
@@ -131,10 +122,17 @@ div.genre {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 0 25px 0 25px;
 }
 li.genre-button {
-  margin: 0 25px 0 25px;
   text-align: center;
+}
+.genre .arrow {
+  margin-right: 15px;
+  border: solid;
+}
+.mobile-only {
+  display: none;
 }
 
 /*MAIN content page, all goes here*/
@@ -158,6 +156,7 @@ div.main {
   border: solid 0.5px grey;
   margin: 12.5px 0 12.5px 0;
   display: flex;
+  cursor: pointer;
 }
 .showcase-image {
   z-index: 0;
@@ -270,5 +269,70 @@ p#copyright {
 a.link {
   color: royalblue;
 }
+
 @media (max-width: 1023px) {
+}
+@media (max-width: 767px) {
+  body.work div.main .showcase-wrapper {
+    width: 100%;
+    padding-top: calc(2 / 3 * 100% - 2%) /*2:3 Ratio*/;
+  }
+  :root {
+    --fs-h1: 6vw;
+    --fs-h2: 5vw;
+    --fs-h3: 4vw;
+    --fs-default: 3vw;
+    --fs-small: 2vw;
+    --fs-xsmall: 1.5vw;
+  }
+  .genre h3 {
+    margin-bottom: 0;
+  }
+  .genre ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    display: none;
+  }
+  li.genre-button {
+    padding: 10px 0;
+    border-top: solid thin rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .expand-target {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  /*.collapse {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  .collapse > * {
+    position: absolute;
+  }
+  .expand {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  .expand > * {
+    position: relative;
+  }*/
+  .genre ul :nth-child(1) {
+    border: none;
+  }
+  .genre .expander {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .mobile-only {
+    display: contents;
+  }
 }

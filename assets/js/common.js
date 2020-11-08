@@ -2,23 +2,66 @@ $(function () {
     $(".showcase-wrapper")
         .on("mouseover", ShowcaseAnimationStart)
         .on("mouseout", ShowcaseAnimationEnd);
-    $("li.genre-button").on("click", ShowGenre);
+    $("li.genre-button").on("click", ShowGenre).on("click", CollapseGenre);
     $(".reset-genre, div.main").on("click", RestoreGenre);
+    $(".clickable")
+        .on("mouseover", ClickableIN)
+        .on("mouseout", ClickableOUT);
+    $(".expander").on("click", ExpandGenre);
+     
+
+    //$("expander").on
+
     AddImagesinExplanationPage();
     AddImagesinWorkShowcase();
-
-    $(".clickable").on("mouseover", ClickableIN).on("mouseout", ClickableOUT);
-    function ClickableIN(){
-        $(this).stop(true).transition(
-            {opacity : 0.5}, 100
-            );
-    }
-    function ClickableOUT(){
-        $(this).stop(true).transition(
-            {opacity : 1}, 100
-            );
-    }
+    $("a").addClass("clickable");
 });
+let PageWidth = window.innerWidth;
+$(window).resize(function(){
+    PageWidth = window.innerWidth;
+})
+let expandstate = false;
+console.log("Current state is "+expandstate);
+function ExpandGenre(){
+    let i = this;
+    if(PageWidth < 767 && expandstate === false){Expand(i);}
+    else if(PageWidth < 767 && expandstate === true){Collapse(i);}
+}
+function CollapseGenre(){
+    if(PageWidth < 767 && expandstate === true){Collapse($(".expander"));}
+}
+function Expand(i){
+    $(i).siblings(".expand-target")
+        .stop(true)
+        .transition({"display" : "flex"}, 0)
+        .transition(
+            {scale: [1.0, 1.0]}, 300, 'snap'
+        )
+    expandstate = true;
+    console.log(i);
+    console.log("Menu expanded\nCurrent state is "+expandstate);
+}
+function Collapse(i){
+    $(i).siblings(".expand-target")
+        .stop(true)
+        .transition(
+            { scale: [1.0, 0]}, 300, 'snap'
+        )
+        .transition({"display" : "none"})
+    expandstate = false;
+    console.log("Menu collapsed\nCurrent state is "+expandstate);
+}
+
+function ClickableIN(){
+        $(this).stop(true).transition(
+            {opacity : 0.7}, 100
+            );
+    }
+function ClickableOUT(){
+    $(this).stop(true).transition(
+        {opacity : 1}, 50
+        );
+    }
 function ShowcaseAnimationStart() {
     let target = $(this);
     Show(target);
@@ -105,7 +148,7 @@ function ShowGenre(){
             console.log("Added showcase for " + target.eq(i).attr("id"));
         }
     }
-    $(".reset-genre").html("Reset");
+    $(".reset-genre #sort").html("Reset");
 }
 function RestoreGenre(){
     $(".showcase-wrapper").stop(true)
@@ -116,5 +159,5 @@ function RestoreGenre(){
         {"opacity" : "100"}, 400
     )
     ;
-    $(".reset-genre").html("Sort");
+    $(".reset-genre #sort").html("Sort");
 }
