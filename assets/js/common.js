@@ -8,9 +8,6 @@ $(function () {
         .on("mouseover", ClickableIN)
         .on("mouseout", ClickableOUT);
     $(".expander").on("click", ExpandGenre);
-     
-
-    //$("expander").on
 
     AddImagesinExplanationPage();
     AddImagesinWorkShowcase();
@@ -24,11 +21,18 @@ let expandstate = false;
 console.log("Current state is "+expandstate);
 function ExpandGenre(){
     let i = this;
-    if(PageWidth < 767 && expandstate === false){Expand(i);}
+    if(PageWidth < 767 && expandstate === false){
+        Expand(i);
+        $(".reset-genre #sort").html("Filter"); //THIS IS BAD AF
+    }
     else if(PageWidth < 767 && expandstate === true){Collapse(i);}
+    
 }
 function CollapseGenre(){
-    if(PageWidth < 767 && expandstate === true){Collapse($(".expander"));}
+    if(PageWidth < 767 && expandstate === true){
+        Collapse($(".expander"));
+        $(".reset-genre #sort").html("Filter"); //THIS IS ALSO BAD AF
+    }
 }
 function Expand(i){
     $(i).siblings(".expand-target")
@@ -51,7 +55,6 @@ function Collapse(i){
     expandstate = false;
     console.log("Menu collapsed\nCurrent state is "+expandstate);
 }
-
 function ClickableIN(){
         $(this).stop(true).transition(
             {opacity : 0.7}, 100
@@ -159,5 +162,5 @@ function RestoreGenre(){
         {"opacity" : "100"}, 400
     )
     ;
-    $(".reset-genre #sort").html("Sort");
+    $(".reset-genre #sort").html("Filter");
 }
