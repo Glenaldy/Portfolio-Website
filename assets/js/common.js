@@ -1,10 +1,23 @@
 $(function () {
-    $(".showcase-wrapper").on("mouseover", ShowcaseAnimationStart);
-    $(".showcase-wrapper").on("mouseout", ShowcaseAnimationEnd);
+    $(".showcase-wrapper")
+        .on("mouseover", ShowcaseAnimationStart)
+        .on("mouseout", ShowcaseAnimationEnd);
     $("li.genre-button").on("click", ShowGenre);
     $(".reset-genre, div.main").on("click", RestoreGenre);
     AddImagesinExplanationPage();
     AddImagesinWorkShowcase();
+
+    $(".clickable").on("mouseover", ClickableIN).on("mouseout", ClickableOUT);
+    function ClickableIN(){
+        $(this).stop(true).transition(
+            {opacity : 0.5}, 100
+            );
+    }
+    function ClickableOUT(){
+        $(this).stop(true).transition(
+            {opacity : 1}, 100
+            );
+    }
 });
 function ShowcaseAnimationStart() {
     let target = $(this);
