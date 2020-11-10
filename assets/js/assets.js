@@ -9,7 +9,7 @@ $(function () {
       target
         .find(".work-box-image")
         .append(
-          '<img src="assets/images/projects/' +
+          '<img src="../assets/images/projects/' +
             target.attr("id") +
             '/thumbnail.jpg" alt="" />'
         );
@@ -21,7 +21,7 @@ $(function () {
   for (i = 0; i < $(".showcase .image").length; i++) {
     let target = $(".showcase .image").eq(i);
     target.append(
-      '<img src="assets/images/projects/' +
+      '<img src="../assets/images/projects/' +
         $("html").attr("id") +
         "/image" +
         (i + 1) +
