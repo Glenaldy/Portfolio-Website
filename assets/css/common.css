@@ -212,6 +212,7 @@ footer p {
   width: 100%;
 }
 .project-type .type {
+  width: fit-content;
 }
 .project-type .title {
   font-weight: var(--fw-semi-bold);
@@ -252,6 +253,9 @@ footer p {
 }
 .showcase .image img {
   width: 100%;
+}
+.showcase p {
+  margin-bottom: var(--fs-xsmall);
 }
 
 /*ABOUT*/
