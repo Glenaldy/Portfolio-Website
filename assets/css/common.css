@@ -16,6 +16,8 @@
   --clr-background: #fafafa;
   --clr-box: #e4e4e4;
   --clr-default: #000000;
+  --clr-link: #0645ad;
+  --clr-link2: #0b0080;
 
   --width-box: 19%;
   --height-box: var(--width-box);
@@ -50,6 +52,17 @@ body {
 a {
   color: var(--clr-default);
   text-decoration: none;
+}
+#link {
+  color: var(--clr-link);
+  font-weight: var(--fw-semi-bold);
+}
+#link:hover {
+  text-decoration: underline;
+  color: var(--clr-link2);
+}
+#warning {
+  font-size: var(--fs-xsmall);
 }
 
 /*HEADER*/
@@ -108,7 +121,7 @@ footer p {
   align-items: center;
 }
 .page > * {
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 /*TITLE*/
@@ -226,7 +239,7 @@ footer p {
   width: 100%;
 }
 .showcase > * {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .showcase .explanation {
   font-size: var(--fs-small);
@@ -249,6 +262,7 @@ footer p {
   width: 100%;
 }
 .showcase .image {
+  filter: drop-shadow(2px 4px 3px black);
   width: 100%;
 }
 .showcase .image img {
@@ -277,7 +291,7 @@ span.bold {
 .about p {
   margin-bottom: var(--fs-default);
 }
-button#contact {
+#contact {
   font-size: var(--fs-medium);
   font-family: var(--ff-primary);
   border: solid;
