@@ -45,6 +45,7 @@ body {
   align-items: center;
   cursor: default;
   margin: 0 auto;
+  position: relative;
 }
 .clickable {
   cursor: pointer;
@@ -67,6 +68,7 @@ a {
 
 /*HEADER*/
 header {
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,6 +94,7 @@ html.about .navigation > :nth-child(2) {
 
 /*FOOTER*/
 footer {
+  z-index: 1;
   width: 100%;
   height: 200px;
   padding: 25px;
@@ -110,6 +113,7 @@ footer p {
 
 /*PAGE all content goes here*/
 .page {
+  z-index: 1;
   width: 100%;
   max-width: var(--max-width-pc);
   height: auto;
@@ -300,6 +304,52 @@ span.bold {
   width: fit-content;
   margin: 50px;
 }
+
+/*MODAL FOR IMAGE*/
+.modal {
+  z-index: 99;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: fit-content;
+  height: 100%;
+  width: 100%;
+  padding: 100px 5vw;
+  position: fixed;
+  overflow: auto;
+  display: none;
+}
+.modal::-webkit-scrollbar {
+  display: none;
+}
+.modal > * {
+  margin-bottom: 10px;
+  z-index: 1000;
+}
+span.modal-close {
+  font-size: var(--fs-big);
+  position: absolute;
+  top: 20px;
+  right: 2.5vw;
+}
+div.modal-close {
+  z-index: -999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.modal-image {
+  z-index: 3;
+  width: 90vw;
+  height: auto;
+  margin-bottom: ;
+}
+.modal-image img {
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 767px) {
   .work-wrapper {
     width: 100%;

@@ -6,7 +6,12 @@
     "roles": "Design, Prototyping",
     "types": "Illustrator, Product Design",
     "tools": "Adobe Illustrator",
-    "explanation": "<p>TungTau™ is a classic coffee shop that has stood through time since 1938 and has grown to be one of the biggest coffee shops in Bangka Island.</p><p>Due to the characteristic of the shop that is affordable yet quality, this project is created with cost and simplicity in mind.</p><p>With the current design, it is possible to package fragile ceramic mug and plate with just cheap cardboard. The outside wrapper allows any design change to be implemented without changing the core packaging of the product.</p><p>Work time : 4 months ('19 October - '20 January)</p>"
+    "explanation": "<p>TungTau™ is a classic coffee shop that has stood through time since 1938 and has grown to be one of the biggest coffee shops in Bangka Island.</p><p>Due to the characteristic of the shop that is affordable yet quality, this project is created with cost and simplicity in mind.</p><p>With the current design, it is possible to package fragile ceramic mug and plate with just cheap cardboard. The outside wrapper allows any design change to be implemented without changing the core packaging of the product.</p><p>Work time : 4 months ('19 October - '20 January)</p>",
+    "image1": "Dimension of the cup packaging",
+    "image2": "Dimension of the plate packaging",
+    "image3": "Outer packaging design and side view",
+    "image4": "Prototype of the end product",
+    "image5": "The inside of the product"
   },
   {
     "id": "whale_tours",
@@ -15,7 +20,10 @@
     "roles": "Branding, Design",
     "types": "Illustrator, Website",
     "tools": "Adobe Illustrator, Figma",
-    "explanation": "<p>This project is created with the theme of summer travel in mind. The scope is to work from limited customer request to make a landing page and branding page.</p><p>With a big attractive page for the current sale to attract customers and 3 points of the company's value, it gives a summary of the company's overall looks.</p><p>Work time : Less than one week ('20 April)</p>"
+    "explanation": "<p>This project is created with the theme of summer travel in mind. The scope is to work from limited customer request to make a landing page and branding page.</p><p>With a big attractive page for the current sale to attract customers and 3 points of the company's value, it gives a summary of the company's overall looks.</p><p>Work time : Less than one week ('20 April)</p>",
+    "image1": "Landing page",
+    "image2": "Icons",
+    "image3": "Brand Identity"
   },
   {
     "id": "reddit_fes",
@@ -24,7 +32,12 @@
     "roles": "Project Manager, Lead Designer",
     "types": "Illustrator",
     "tools": "Adobe Illustrator, Adobe Photoshop",
-    "explanation": "<p>A big commission project from the overseas community for Love Live! Fest™ concert to show fan appreciations by donating a custom flower stand and a giant custom banner. I was in charge in overall design, banner design, printing related management, and cut out work for flower stand preparation.</p><p>The banner was created in collaboration by me and artist <a href='https://twitter.com/chrone_co' target='_blank'><span id='link'>Chroneco.</span></a> I created the background and logo design while all the character illustrations in the banner are created by Chroneco.<p>The flower stand illustration was created by multiple artists, details can be found <a href='https://twitter.com/MastrMirage/status/1207141860071723009' target='_blank'><span id='link'>here.</span></a></p><p>Work time : 3 Months ('19 November - '20 January)</p><p><span id='warning'>Love Live brand and the original character design is owned by KADOKAWA CO., Lantis Ltd. and SUNRISE INC.</span></p>"
+    "explanation": "<p>A big commission project from the overseas community for Love Live! Fest™ concert to show fan appreciations by donating a custom flower stand and a giant custom banner. I was in charge in overall design, banner design, printing related management, and cut out work for flower stand preparation.</p><p>The banner was created in collaboration by me and artist <a href='https://twitter.com/chrone_co' target='_blank'><span id='link'>Chroneco.</span></a> I created the background and logo design while all the character illustrations in the banner are created by Chroneco.<p>The flower stand illustration was created by multiple artists, details can be found <a href='https://twitter.com/MastrMirage/status/1207141860071723009' target='_blank'><span id='link'>here.</span></a></p><p>Work time : 3 Months ('19 November - '20 January)</p><p><span id='warning'>Love Live brand and the original character design is owned by KADOKAWA CO., Lantis Ltd. and SUNRISE INC.</span></p>",
+    "image1": "Banner with Chroneco's Art",
+    "image2": "Banner only",
+    "image3": "The end product of the flower stand",
+    "image4": "The end printed product with the community",
+    "image5": "Process of cutting the art board"
   },
   {
     "id": "chicken_brochure",
@@ -33,7 +46,9 @@
     "roles": "Designer",
     "types": "Illustrator",
     "tools": "Adobe Illustrator, Adobe Photoshop",
-    "explanation": "<p>A brochure work requested by a small meat distributor in Indonesia to promote chicken meat retail services for household use.</p><p>Work time : 1 week ('20 June)</p>"
+    "explanation": "<p>A brochure work requested by a small meat distributor in Indonesia to promote chicken meat retail services for household use.</p><p>Work time : 1 week ('20 June)</p>",
+    "image1": "Version 1",
+    "image2": "Version 2"
   },
   {
     "id": "neboke_no_hibi",
@@ -42,7 +57,12 @@
     "roles": "Animator, Sculptor, Video Editor",
     "types": "Video, Stop Motion",
     "tools": "Adobe Premiere Pro, Adobe After Effect, Dragonframe",
-    "explanation": "<p>\"This is the story of Neboke, an alarm clock that always oversleeps and fails to wake his owner up.<br>One day, the owner brought home a new alarm clock, Dejike. Dejike was able to perform his task as an alarm clock perfectly. But, on this particular night before the important morning for the owner, Dejike has run out of battery. <br>Neboke noticed this and tried his hardest to wake up the owner. In the end, the owner noticed Neboke's hard work and thanked Neboke.\"</p><p>This project started with the submission of character design by a classmate in Kyoto Computer Gakuin. After revisions to simplify the Neboke design for animation purposes and making another character called Dejike, I started sculpting the head from thick foam and white clay and painted it with acrylic paint. The creative design of the eyes and the cheeks allows me to express a lot of emotion in the story.</p><p>Work time : 4 months ('19 October - '20 January)<br><span style='font-size: var(--fs-xsmall)'>3 months of sculpting and character creation.<br>1 month of animation and video editing.</span></p>"
+    "explanation": "<p>\"This is the story of Neboke, an alarm clock that always oversleeps and fails to wake his owner up.<br>One day, the owner brought home a new alarm clock, Dejike. Dejike was able to perform his task as an alarm clock perfectly. But, on this particular night before the important morning for the owner, Dejike has run out of battery. <br>Neboke noticed this and tried his hardest to wake up the owner. In the end, the owner noticed Neboke's hard work and thanked Neboke.\"</p><p>This project started with the submission of character design by a classmate in Kyoto Computer Gakuin. After revisions to simplify the Neboke design for animation purposes and making another character called Dejike, I started sculpting the head from thick foam and white clay and painted it with acrylic paint. The creative design of the eyes and the cheeks allows me to express a lot of emotion in the story.</p><p>Work time : 4 months ('19 October - '20 January)<br><span style='font-size: var(--fs-xsmall)'>3 months of sculpting and character creation.<br>1 month of animation and video editing.</span></p>",
+    "image1": "One of the scene in Neboke no Hibi",
+    "image2": "The scene during climax of the story",
+    "image3": "Character concept drawing by classmate",
+    "image4": "Character concept sheet by classmate",
+    "image5": "Storyboard"
   },
   {
     "id": "stage_3d",
@@ -51,7 +71,12 @@
     "roles": "3D modeler, Designer",
     "types": "3D work, Poster",
     "tools": "Adobe Illustrator, Adobe Photoshop, Autodesk Maya",
-    "explanation": "<p>A 3D project created in Maya about a live house interior that consists of lighting and a stage. The end result is printed on a poster for display purposes.</p><p>Work time : 1 month ('20 January)</p>"
+    "explanation": "<p>A 3D project created in Maya about a live house interior that consists of lighting and a stage. The end result is printed on a poster for display purposes.</p><p>Work time : 1 month ('20 January)</p>",
+    "image1": "The end result of all rendering in poster form",
+    "image2": "Front view",
+    "image3": "Bottom view, emphasizing the god rays from the spotlight",
+    "image4": "Side view",
+    "image5": "Top view"
   },
   {
     "id": "covid_poster",
@@ -60,7 +85,8 @@
     "roles": "Designer",
     "types": "Poster",
     "tools": "Adobe Illustrator",
-    "explanation": "<p>A poster to tell about 4 important points to protect oneself from the covid-19. Each point has an illustration to emphasize and visualize the importance of being hygienic.</p><p>Work time : 1 week ('20 May)</p>"
+    "explanation": "<p>A poster to tell about 4 important points to protect oneself from the covid-19. Each point has an illustration to emphasize and visualize the importance of being hygienic.</p><p>Work time : 1 week ('20 May)</p>",
+    "image1": "Poster"
   },
   {
     "id": "",
@@ -69,6 +95,7 @@
     "roles": "",
     "types": "",
     "tools": "",
-    "explanation": ""
+    "explanation": "",
+    "image1": ""
   }
 ]

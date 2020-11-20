@@ -4,6 +4,7 @@ $(function () {
   AddShowcaseElement();
   target.find("header").load("../assets/element/header.html");
   target.find("footer").load("../assets/element/footer.html");
+  target.find(".modal").load("../assets/element/modal.html");
 });
 function AddShowcaseElement() {
   //Add element specific to page, EN or JP
@@ -12,6 +13,17 @@ function AddShowcaseElement() {
   targetspecific
     .find("div.page")
     .load("../assets/images/projects/" + htmlId + "/page-en.html", function () {
+      //ADD IMAGE
+      for (i = 0; i < $(".showcase .image").length; i++) {
+        let target = $(".showcase .image").eq(i);
+        target.append(
+          '<img src="../assets/images/projects/' +
+            $("html").attr("id") +
+            "/image" +
+            (i + 1) +
+            '.jpg" alt="" />'
+        );
+      }
       //ADD TEXT VIA JSON
       let openJson;
       switch ($("html").attr("lang")) {
@@ -33,21 +45,15 @@ function AddShowcaseElement() {
               $(".types").html(data[i]["types"]);
               $(".tools").html(data[i]["tools"]);
               $(".showcase .explanation").html(data[i]["explanation"]);
+              for (j = 0; j < $(".showcase .image").length; j++) {
+                let target = $(".showcase .image").eq(j).find("img");
+                let imageName = "image" + (j + 1);
+                let altAttr = data[i][imageName];
+                target.attr("alt", altAttr);
+              }
             }
-            for (let j = 0; data[i].length; j++) {}
           }
         });
-      //ADD IMAGE
-      for (i = 0; i < $(".showcase .image").length; i++) {
-        let target = $(".showcase .image").eq(i);
-        target.append(
-          '<img src="../assets/images/projects/' +
-            $("html").attr("id") +
-            "/image" +
-            (i + 1) +
-            '.jpg" alt="" />'
-        );
-      }
     });
 }
 

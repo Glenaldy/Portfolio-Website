@@ -2,6 +2,21 @@ $(function () {
   OnLoad(); //Load all the state when document ready
   $(".work-wrapper").on("mouseover", WorkHoverIn).on("mouseout", WorkHoverOut);
   $(".genre-button").on("click", ShowGenre);
+
+  $(document).on("click", ".modal-close", ModalClose);
+  $(document).on("click", ".showcase .image", ModalOpen);
+  function ModalClose() {
+    $(".modal").css({ display: "none" });
+    $(".modal .modal-image").html("");
+    $(".modal .modal-title").html("");
+  }
+  function ModalOpen() {
+    let imageSource = $(this).html();
+    let imageTitle = $(this).find("img").attr("alt");
+    $(".modal .modal-image").html(imageSource);
+    $(".modal .modal-title").html(imageTitle);
+    $(".modal").css({ display: "block" });
+  }
 });
 function OnLoad() {
   $(".hide-load").css({ opacity: "0" });
