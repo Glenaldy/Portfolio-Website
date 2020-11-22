@@ -21,7 +21,7 @@ $(function () {
 function OnLoad() {
   $(".hide-load").css({ opacity: "0" });
   $(".genre-button[data-genre='all']").css({
-    "background-color": "rgba(0, 0, 0, 0.1)",
+    "background-color": "var(--clr-box)",
   });
 }
 function WorkHoverIn() {
